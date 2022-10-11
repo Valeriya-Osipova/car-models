@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="car_models.js"></script>
+    <script>
+        models = JSON.parse(models);
+    </script>
+</head>
+<body>
+    <script>
+    window.onload = function(){
+        console.log(models);
+           
+        //models[i]
+        models.forEach(function(model){
+            document.querySelector('#models').innerHTML+='<div class="element">'+'<a target = "_blank" href="'+model[2]+'">'+'<img src="'+model[0]+'" alt="Картинка">'+'<br>'+ model[1]+'</a>'+'<br>'+'<div>';
+        });
+        console.log(picture);
+    }
+    </script>
+    <h1>Популярные марки автомобилей</h1>
+
+        <div id="models" class="main">
+        
+    </div>
+    <footer class="footer">
+        <p>
+            Information from <a target = "_blank" href="https://auto.vercity.ru/catalog/auto/">auto.vercity</a>
+        </p>
+    </footer>
+</body>
+</html>
